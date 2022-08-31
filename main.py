@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
 
-@app.route('/jira_webhook')
-def hello_world(**kwargs):
-    print(kwargs)
+@app.route('/jira_webhook', methods=["POST"])
+def hello_world():
+    print(request.form)
     return 'Hello World!'
 
 
