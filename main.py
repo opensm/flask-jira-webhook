@@ -1,6 +1,6 @@
 from flask import Flask, request, datetime, requests
 from copy import deepcopy
-import json
+import simplejson as json
 
 app = Flask(__name__)
 
